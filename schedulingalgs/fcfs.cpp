@@ -15,6 +15,7 @@ Job Fcfs::calcJob(Job & j, double startTime)
 
 string Fcfs::runJob(Job toRun)
 {	
+	if (toRun.arrival > time)time = toRun.arrival;
 	toRun = calcJob(toRun, time);
 	time += toRun.timeRequired;
 	totalWait += toRun.waitTime;
