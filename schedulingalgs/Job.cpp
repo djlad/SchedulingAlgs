@@ -13,10 +13,10 @@ void Job::print()
 Job::Job(double arrival, double timeRequired) {
 	this->arrival = arrival;
 	this->timeRequired = timeRequired;
-	this->startTime = NULL;
-	this->endTime = NULL;
-	this->waitTime = NULL;
-	this->turnAround = NULL;
+	this->startTime = -1;//-1 means unset
+	this->endTime = -1;
+	this->waitTime = -1;
+	this->turnAround = -1;
 }
 
 string Job::toStr()

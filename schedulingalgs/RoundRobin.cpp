@@ -7,7 +7,6 @@ using namespace std;
 
 Job RoundRobin::calcJob(Job & job, double endTime)
 {	
-	job.startTime = -1;
 	job.endTime = endTime;
 	job.turnAround = job.endTime - job.arrival;
 	job.waitTime = job.turnAround - job.timeRequired;
@@ -25,6 +24,9 @@ void RoundRobin::runJob(Job toRun)
 	while (!readyJobs.empty() && futureJob.arrival > time) {
 		nextJob = readyJobs.front();
 		readyJobs.pop();
+		if (nextJob.timeRemaining == nextJob.timeRequired){
+			nextJob.startTime = time;
+		}
 		nextJob.timeRemaining -= timeQuantum;
 		if (nextJob.timeRemaining <= 0) {
 			time = time + timeQuantum + nextJob.timeRemaining;
@@ -47,6 +49,9 @@ void RoundRobin::finish() {
 	while (!readyJobs.empty()) {
 		nextJob = readyJobs.front();
 		readyJobs.pop();
+		if (nextJob.timeRemaining == nextJob.timeRequired){
+			nextJob.startTime = time;
+		}
 		nextJob.timeRemaining -= timeQuantum;
 		if (nextJob.timeRemaining <= 0) {
 			time = time + timeQuantum + nextJob.timeRemaining;
