@@ -24,6 +24,12 @@ void RoundRobin::runJob(Job toRun)
 	while (!readyJobs.empty() && futureJob.arrival > time) {
 		nextJob = readyJobs.front();
 		readyJobs.pop();
+		cout << "time: " << time<<endl;
+		for (int i = 0; i < readyJobs.size(); i++){
+			//cout << readyJobs[i] << " " << endl;
+		}
+		nextJob.print();
+		cout << endl;
 		if (nextJob.timeRemaining == nextJob.timeRequired){
 			nextJob.startTime = time;
 		}

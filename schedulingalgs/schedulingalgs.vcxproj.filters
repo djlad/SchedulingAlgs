@@ -60,7 +60,7 @@
       <Filter>Source Files\schedulingalgsclasses</Filter>
     </ClCompile>
     <ClCompile Include="RoundRobin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\schedulingalgsclasses</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
