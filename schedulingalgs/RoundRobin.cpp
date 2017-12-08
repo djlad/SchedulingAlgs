@@ -16,20 +16,14 @@ Job RoundRobin::calcJob(Job & job, double endTime)
 void RoundRobin::runJob(Job toRun)
 {
 	if (toRun.arrival <= time) {
-		readyJobs.push(toRun);
+		readyJobs.push_back(toRun);
 		return;
 	}
 	Job futureJob = toRun;
 	Job nextJob;
 	while (!readyJobs.empty() && futureJob.arrival > time) {
 		nextJob = readyJobs.front();
-		readyJobs.pop();
-		cout << "time: " << time<<endl;
-		for (int i = 0; i < readyJobs.size(); i++){
-			//cout << readyJobs[i] << " " << endl;
-		}
-		nextJob.print();
-		cout << endl;
+		readyJobs.pop_front();
 		if (nextJob.timeRemaining == nextJob.timeRequired){
 			nextJob.startTime = time;
 		}
@@ -41,20 +35,20 @@ void RoundRobin::runJob(Job toRun)
 		}
 		else {
 			time += timeQuantum;
-			readyJobs.push(nextJob);
+			readyJobs.push_back(nextJob);
 		}
 	}
 	if (time < futureJob.arrival){
 		time = futureJob.arrival;
 	}
-	readyJobs.push(futureJob);
+	readyJobs.push_front(futureJob);
 }
 
 void RoundRobin::finish() {
 	Job nextJob;
 	while (!readyJobs.empty()) {
 		nextJob = readyJobs.front();
-		readyJobs.pop();
+		readyJobs.pop_front();
 		if (nextJob.timeRemaining == nextJob.timeRequired){
 			nextJob.startTime = time;
 		}
@@ -66,7 +60,7 @@ void RoundRobin::finish() {
 		}
 		else {
 			time += timeQuantum;
-			readyJobs.push(nextJob);
+			readyJobs.push_back(nextJob);
 		}
 	}
 }
