@@ -39,6 +39,7 @@ void RoundRobin::runJob(Job toRun)
 		}
 	}
 	if (time < futureJob.arrival){
+		totalIdleTime += futureJob.arrival - time;
 		time = futureJob.arrival;
 	}
 	readyJobs.push_front(futureJob);

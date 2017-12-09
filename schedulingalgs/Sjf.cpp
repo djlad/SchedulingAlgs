@@ -42,6 +42,7 @@ void Sjf::runJob(Job toRun)
 	//If no jobs to run except for future job
 	//wait till future job has arrived
 	if (time < futureJob.arrival) {
+		totalIdleTime += futureJob.arrival - time;
 		time = futureJob.arrival;
 	}
 	//move futureJob to ready

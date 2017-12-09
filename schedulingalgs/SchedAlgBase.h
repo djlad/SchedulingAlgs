@@ -10,6 +10,7 @@ protected:
 	vector<Job> finishedJobs;
 	double time = 0;
 	double totalWait = 0;
+	double totalIdleTime = 0;
 	string algName = "None";
 public:
 	void print();

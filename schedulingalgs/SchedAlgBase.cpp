@@ -6,7 +6,8 @@ void SchedAlgBase::print()
 {
 	cout << algName <<": " << endl;
 	cout << "Total Time Units: " << time << endl;
-	cout << "CPU utilization: " << ((double)time - totalWait) / time;
+	cout << "CPU utilization: " << (time - totalIdleTime) / time << endl;
+	cout << "Total Idle Time: " << totalIdleTime;
 	cout << endl << endl;
 }
 
