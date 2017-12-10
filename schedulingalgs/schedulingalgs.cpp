@@ -11,7 +11,6 @@
 #include <cstdlib>
 #include <random>
 #include <math.h>
-#include <conio.h>
 
 
 Job readJob(fstream &jobs) {
@@ -139,7 +138,8 @@ int main(int argc, char** argv)
 	}
 	cout << getArgJobFile(argc, argv) << endl;
 	
-	_getch();//wait for input from user before termination
+	//wait for input from user before termination
+	system("pause");
     return 0;
 }
 
