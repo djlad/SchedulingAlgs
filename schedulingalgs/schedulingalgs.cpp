@@ -139,7 +139,9 @@ int main(int argc, char** argv)
 	cout << getArgJobFile(argc, argv) << endl;
 	
 	//wait for input from user before termination
-	system("pause");
+	try {
+		system("pause");
+	} catch(exception e) { }
     return 0;
 }
 
