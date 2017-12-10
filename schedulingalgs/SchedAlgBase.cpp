@@ -6,9 +6,10 @@ SchedAlgBase::SchedAlgBase(double contextSwitchTime):contextSwitchTime(contextSw
 
 void SchedAlgBase::print()
 {
+	cout << "--------" << endl;
 	cout << algName <<": " << endl;
 	cout << "Total Time Units: " << time << endl;
-	cout << "CPU utilization: " << getCPUUtilization() << endl;
+	cout << "CPU utilization: " << getCPUUtilization()*100 << "%" << endl;
 	cout << "Total Idle Time: " << totalIdleTime << endl;
 	printMetrics();
 	cout << endl;
