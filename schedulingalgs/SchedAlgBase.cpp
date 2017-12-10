@@ -11,7 +11,7 @@ void SchedAlgBase::print()
 	cout << "Total Time Units: " << time << endl;
 	cout << "CPU utilization: " << getCPUUtilization()*100 << "%" << endl;
 	cout << "Total Idle Time: " << totalIdleTime << endl;
-	printMetrics();
+	//printMetrics();
 	cout << endl;
 }
 

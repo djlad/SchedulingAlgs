@@ -22,9 +22,9 @@ Job::Job(double arrival, double timeRequired) {
 string Job::toStr()
 {	
 	ostringstream os;
-	os << "process id: " << procId << endl;
+	os << "Process id: " << procId << endl;
 	os << "arrival: " << arrival << endl;
-	os << "time required: " << timeRequired << endl;
+	os << "service time: " << timeRequired << endl;
 	os << "start time: " << startTime << endl;
 	os << "end time: " << endTime << endl;
 	os << "wait time: " << waitTime << endl;
