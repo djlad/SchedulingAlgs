@@ -9,7 +9,7 @@ class Fcfs:public SchedAlgBase
 {
 	Job calcJob(Job &j, double startTime);
 public:
-	Fcfs() { algName = "FCFS"; };
+	Fcfs(double contextSwitchTime):SchedAlgBase(contextSwitchTime) { algName = "FCFS"; };
 	string runJob(Job toRun);
 };
 

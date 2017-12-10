@@ -8,6 +8,7 @@ class SchedAlgBase
 {
 private:
 	double contextSwitchTime = 0;
+	int contextSwitches = 0;
 protected:
 	vector<Job> finishedJobs;
 	double time = 0;

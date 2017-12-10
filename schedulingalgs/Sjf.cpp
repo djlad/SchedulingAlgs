@@ -31,6 +31,7 @@ void Sjf::runJob(Job toRun)
 	while (!readyJobs.empty()) {
 		nextJob = readyJobs.top();
 		readyJobs.pop();
+		switchContext();
 		nextJob = calcJob(nextJob, time);
 		time += nextJob.timeRequired;
 		finishedJobs.push_back(nextJob);
@@ -55,6 +56,7 @@ void Sjf::finish()
 	while (!readyJobs.empty()) {
 		nextJob = readyJobs.top();
 		readyJobs.pop();
+		switchContext();
 		nextJob = calcJob(nextJob, time);
 		time += nextJob.timeRequired;
 		finishedJobs.push_back(nextJob);

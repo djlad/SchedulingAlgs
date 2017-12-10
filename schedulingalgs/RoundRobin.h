@@ -9,7 +9,7 @@ class RoundRobin: public SchedAlgBase
 	deque<Job> readyJobs;
 	Job calcJob(Job &job, double startTime);
 public:
-	RoundRobin(double timeQuantum) :timeQuantum(timeQuantum) { algName = "Round Robin"; };
+	RoundRobin(double contextSwitchTime, double timeQuantum):SchedAlgBase(contextSwitchTime), timeQuantum(timeQuantum) { algName = "Round Robin"; };
 	void runJob(Job toRun);
 	void finish();
 };

@@ -10,7 +10,7 @@ private:
 	priority_queue<Job> readyJobs;
 	Job calcJob(Job & j, double startTime);
 public:
-	Sjf() { algName = "Sjf"; }
+	Sjf(double contextSwitchTime):SchedAlgBase(contextSwitchTime) { algName = "Sjf"; }
 	void runJob(Job toRun);
 	void finish();
 };

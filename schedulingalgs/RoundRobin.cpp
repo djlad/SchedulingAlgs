@@ -24,6 +24,7 @@ void RoundRobin::runJob(Job toRun)
 	while (!readyJobs.empty() && futureJob.arrival > time) {
 		nextJob = readyJobs.front();
 		readyJobs.pop_front();
+		switchContext();
 		if (nextJob.timeRemaining == nextJob.timeRequired){
 			nextJob.startTime = time;
 		}
@@ -50,6 +51,7 @@ void RoundRobin::finish() {
 	while (!readyJobs.empty()) {
 		nextJob = readyJobs.front();
 		readyJobs.pop_front();
+		switchContext();
 		if (nextJob.timeRemaining == nextJob.timeRequired){
 			nextJob.startTime = time;
 		}

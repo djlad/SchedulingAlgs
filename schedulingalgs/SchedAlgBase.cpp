@@ -52,5 +52,6 @@ double SchedAlgBase::getCPUUtilization()
 
 void SchedAlgBase::switchContext()
 {
+	contextSwitches++;
 	time += contextSwitchTime;
 }
