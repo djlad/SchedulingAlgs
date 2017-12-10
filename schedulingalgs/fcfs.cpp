@@ -19,6 +19,7 @@ string Fcfs::runJob(Job toRun)
 		totalIdleTime += toRun.arrival - time;
 		time = toRun.arrival;
 	}
+	switchContext();//pass time for context switch
 	toRun = calcJob(toRun, time);
 	time += toRun.timeRequired;
 	totalWait += toRun.waitTime;
