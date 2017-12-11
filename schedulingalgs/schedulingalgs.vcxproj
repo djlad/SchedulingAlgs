@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="fcfs.h" />
     <ClInclude Include="Job.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="RoundRobin.h" />
     <ClInclude Include="SchedAlgBase.h" />
     <ClInclude Include="Sjf.h" />
@@ -167,6 +168,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="jobs.txt" />
+    <Text Include="description.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="schedulingalgs.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
