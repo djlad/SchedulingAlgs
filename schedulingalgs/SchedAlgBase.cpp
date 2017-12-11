@@ -6,6 +6,7 @@ SchedAlgBase::SchedAlgBase(double contextSwitchTime):contextSwitchTime(contextSw
 
 void SchedAlgBase::print()
 {
+	//print main details of simulation
 	cout << "--------" << endl;
 	cout << algName <<": " << endl;
 	cout << "Total Time Units: " << time << endl;
@@ -16,12 +17,15 @@ void SchedAlgBase::print()
 }
 
 void SchedAlgBase::printMetrics() {
+	//print extra metrics of simulation (for testing and chart comparisons)
 	cout << "Average Turn Around Time: " << getAvgTurnAround() << endl;
 	cout << "Average Wait Time: " << getAvgWaitTime() << endl;
+	cout << "Context Switches: " << contextSwitches << endl;
 }
 
 void SchedAlgBase::printJobs()
 {
+	//print all jobs
 	for (int i = 0; i < finishedJobs.size(); i++ ) {
 		finishedJobs[i].print();
 		cout << endl;
