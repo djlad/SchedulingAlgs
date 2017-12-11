@@ -1,7 +1,6 @@
 // schedulingalgs.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "job.h"
 #include "fcfs.h"
 #include "Sjf.h"

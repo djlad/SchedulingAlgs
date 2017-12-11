@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Job.h"
 #include <iostream>
 #include <sstream>

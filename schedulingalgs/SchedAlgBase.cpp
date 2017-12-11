@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "SchedAlgBase.h"
 #include <iostream>
 using namespace std;

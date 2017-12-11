@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Sjf.h"
 #include <iostream>
 using namespace std;

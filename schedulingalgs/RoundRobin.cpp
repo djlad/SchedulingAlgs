@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "RoundRobin.h"
 #include "Job.h"
 #include <iostream>
