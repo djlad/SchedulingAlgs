@@ -24,7 +24,14 @@ Top Level:
 
 		schedulingalgs.vcxproj: visual studio vcxproj file (contains build info when compiling with visual studio)
 		schedulingalgs.vcxproj.filters: visual studio file for creating a file structure (files will be seperated into "fake" folders when opened with visual studio).
+	
 	schedulingalgs.sln: visual studio solution file
+
+	reports:
+		Results Table.xlsx: Contains results for test run. (using data from results.docx). Used to make graphs.
+		Results.docx: Contains console output of test run
+		scheduling algorithms presentation.pptx: contains power point presentation
+		Team Project Topic One_ CPU Scheduling Algorithms Report.docx: contains written component of project.
 		
 
 Build Command:
