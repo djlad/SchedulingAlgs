@@ -83,7 +83,7 @@ int main(int argc, char** argv)
 	char* inputFile = getArgJobFile(argc, argv);
 	//if no input file, generate input file
 	if (strcmp("", inputFile) == 0) {
-		generateJobs(100, 5);
+		generateJobs(1000, 5);
 		inputFile = "jobs.txt";
 	}
 	//open file read numJobs and contextSwitch
