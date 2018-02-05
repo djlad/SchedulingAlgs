@@ -4,8 +4,11 @@ School Project for simulating operating system scheduling algorithms.
 Project Description:
 
 Project Directory Structure:
+
 Top Level:
+
 	schedulingalgs: contains all code
+        
 		makeandrun.bat: build and run project
 
 		schedulingalgs.cpp: Contains main function.
